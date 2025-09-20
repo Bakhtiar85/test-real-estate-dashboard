@@ -5,7 +5,10 @@ import "./PropertyCard.css";
 
 function PropertyCard({ property }: PropertyCardProps) {
   return (
-    <div className="property-card" onClick={() => goToDetails(property.id)}>
+    <div
+      className="property-card"
+      onClick={() => goToDetails(property.slug)}
+    >
       <img src={property.image} alt={property.title} className="property-image" />
       <div className="property-info">
         <h2 className="property-title">{property.title}</h2>

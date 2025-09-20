@@ -19,5 +19,5 @@ export interface PropertyGridProps {
 }
 
 export interface DetailsPageProps {
-    id: string;
+    slug: string;
 }

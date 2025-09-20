@@ -9,8 +9,9 @@ export interface Property {
     location: string;     // e.g., "Downtown", "Suburbs"
     image: string;        // URL to image
     description?: string; // optional long text for details page
+    slug: string;
 }
 
 export type Route =
     | { page: "list" }
-    | { page: "details"; id: string };
+    | { page: "details"; slug: string };

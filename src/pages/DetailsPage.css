@@ -1,0 +1,29 @@
+/* src\pages\DetailsPage.css */
+.details-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.details-page img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .details-page {
+    grid-template-columns: 1fr;
+  }
+}

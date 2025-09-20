@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   if (route.page === "details") {
-    return <DetailsPage id={route.id} />;
+    return <DetailsPage slug={route.slug} />;
   }
 
   const filtered = filterAndSortProperties(properties, search, minBeds, sortDir);

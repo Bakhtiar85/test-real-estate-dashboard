@@ -1,16 +1,19 @@
 /* src\components\PropertyCard.css */
 .property-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
     overflow: hidden;
+    background: #fff;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .property-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .property-image {
@@ -20,21 +23,27 @@
 }
 
 .property-info {
-    padding: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .property-title {
     font-size: 1.1rem;
-    margin: 0 0 4px;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
 }
 
 .property-price {
+    font-size: 1rem;
     font-weight: bold;
-    margin: 0 0 6px;
-    color: #2c3e50;
+    margin: 0;
+    color: #27ae60;
 }
 
 .property-details {
     font-size: 0.9rem;
-    color: #555;
+    color: #666;
 }

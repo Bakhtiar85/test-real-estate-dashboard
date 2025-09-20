@@ -4,7 +4,7 @@ import { SortDir } from "../types-interfaces/types";
 
 function ControlsBar({ search, setSearch, minBeds, setMinBeds, sortDir, setSortDir }: ControlsBarProps) {
     return (
-        <div style={{ padding: "16px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+        <div className="controls-bar">
             <input
                 type="text"
                 placeholder="Search properties..."
