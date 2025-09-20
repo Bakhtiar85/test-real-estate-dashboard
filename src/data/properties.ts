@@ -5,9 +5,9 @@ import { slugify } from "../utils/slug";
 type RawProperty = Omit<Property, 'slug'>;
 
 const raw: RawProperty[] = [
-  { id: "1", title: "Modern Apartment", price: 250000, bedrooms: 2, location: "Downtown", image: "https://via.placeholder.com/400x250?text=Apartment+1", description: "A stylish modern apartment located in the heart of the city." },
-  { id: "2", title: "Cozy Family House", price: 450000, bedrooms: 4, location: "Suburbs", image: "https://via.placeholder.com/400x250?text=House+1", description: "A comfortable home perfect for a growing family." },
-  { id: "3", title: "Luxury Villa", price: 1200000, bedrooms: 5, location: "Beachside", image: "https://via.placeholder.com/400x250?text=Villa+1", description: "A luxurious villa with stunning ocean views." },
+  { id: "1", title: "Modern Apartment", price: 250000, bedrooms: 2, location: "Downtown", image: "https://media.istockphoto.com/id/834810056/photo/white-apartment-with-brick-wall.jpg?s=1024x1024&w=is&k=20&c=7xQnJMUqb6HwHRoyrlKZFohOMuQgFhvIUXzQne9jmfk=", description: "A stylish modern apartment located in the heart of the city." },
+  { id: "2", title: "Cozy Family House", price: 450000, bedrooms: 4, location: "Suburbs", image: "https://images.pexels.com/photos/4112236/pexels-photo-4112236.jpeg", description: "A comfortable home perfect for a growing family." },
+  { id: "3", title: "Luxury Villa", price: 1200000, bedrooms: 5, location: "Beachside", image: "https://images.pexels.com/photos/12720655/pexels-photo-12720655.jpeg", description: "A luxurious villa with stunning ocean views." },
   { id: "4", title: "Compact Studio", price: 150000, bedrooms: 1, location: "Downtown", image: "https://via.placeholder.com/400x250?text=Studio+1", description: "Perfect for singles or students, right next to public transport." },
   { id: "5", title: "Rustic Cottage", price: 300000, bedrooms: 3, location: "Countryside", image: "https://via.placeholder.com/400x250?text=Cottage+1", description: "A charming cottage with lots of greenery around." },
   { id: "6", title: "Penthouse Suite", price: 950000, bedrooms: 3, location: "City Center", image: "https://via.placeholder.com/400x250?text=Penthouse+1", description: "High-rise penthouse with panoramic skyline views." },

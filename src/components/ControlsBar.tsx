@@ -1,6 +1,7 @@
 // src\components\ControlsBar.tsx
 import { ControlsBarProps } from "../types-interfaces/interfaces";
 import { SortDir } from "../types-interfaces/types";
+import "./ControlsBar.css";
 
 function ControlsBar({ search, setSearch, minBeds, setMinBeds, sortDir, setSortDir }: ControlsBarProps) {
     return (

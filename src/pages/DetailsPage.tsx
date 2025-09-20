@@ -18,20 +18,15 @@ function DetailsPage({ slug }: DetailsPageProps) {
 
     return (
         <div className="details-page">
-            <div>
-                <button onClick={goToList}>← Back</button>
-                <img src={property.image} alt={property.title} />
-            </div>
-            <div className="details-info">
-                <h2>{property.title}</h2>
-                <p><strong>Price:</strong> ${property.price.toLocaleString()}</p>
-                <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
-                <p><strong>Location:</strong> {property.location}</p>
-                {property.description && <p>{property.description}</p>}
-            </div>
+            <button onClick={goToList}>← Back</button>
+            <h2>{property.title}</h2>
+            <img src={property.image} alt={property.title} />
+            <p><strong>Price:</strong> ${property.price.toLocaleString()}</p>
+            <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
+            <p><strong>Location:</strong> {property.location}</p>
+            {property.description && <p>{property.description}</p>}
         </div>
     );
-
 }
 
 export default DetailsPage;

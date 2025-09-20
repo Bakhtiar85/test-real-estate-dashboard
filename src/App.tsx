@@ -27,7 +27,7 @@ function App() {
   const filtered = filterAndSortProperties(properties, search, minBeds, sortDir);
 
   return (
-    <div>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "16px" }}>
       <h1>Real Estate Dashboard</h1>
       <ControlsBar
         search={search}

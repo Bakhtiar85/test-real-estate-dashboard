@@ -1,29 +1,31 @@
 /* src\pages\DetailsPage.css */
 .details-page {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .details-page img {
-  width: 100%;
-  border-radius: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
 }
 
-.details-info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.details-page h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    color: #2c3e50;
 }
 
-@media (max-width: 700px) {
-  .details-page {
-    grid-template-columns: 1fr;
-  }
+.details-page p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.details-page button {
+    margin-bottom: 16px;
 }
