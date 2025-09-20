@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
+import { useEffect, useState } from "react";
+import { properties } from "./data/properties";
+import ControlsBar from "./components/ControlsBar";
+import PropertyGrid from "./components/PropertyGrid";
+import { Route, SortDir } from "./types-interfaces/types";
+import { filterAndSortProperties } from "./utils/propertyUtils";
+import { parseHash } from "./router";
+import DetailsPage from "./pages/DetailsPage";
 
 function App() {
+  const [search, setSearch] = useState("");
+  const [minBeds, setMinBeds] = useState(0);
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [route, setRoute] = useState<Route>(parseHash());
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(parseHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  if (route.page === "details") {
+    return <DetailsPage id={route.id} />;
+  }
+
+  const filtered = filterAndSortProperties(properties, search, minBeds, sortDir);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Real Estate Dashboard</h1>
+      <ControlsBar
+        search={search}
+        setSearch={setSearch}
+        minBeds={minBeds}
+        setMinBeds={setMinBeds}
+        sortDir={sortDir}
+        setSortDir={setSortDir}
+      />
+      <PropertyGrid items={filtered} />
     </div>
   );
 }
